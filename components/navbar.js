@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import { StyledButton } from './button';
 
 export default function Navbar() {
-  return <StyledNavbar></StyledNavbar>;
+  return (
+    <StyledNavbar>
+      <StyledButton>Rooms</StyledButton>
+      <StyledButton>Flat Mates</StyledButton>
+    </StyledNavbar>
+  );
 }
 
 const StyledNavbar = styled.nav`

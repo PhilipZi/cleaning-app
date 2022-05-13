@@ -1,4 +1,4 @@
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: "#0070f3",
+    primary: '#0070f3',
   },
 };
 
@@ -19,14 +19,10 @@ function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps} foo={20} />
       </ThemeProvider>
     </>
   );
 }
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
-
-export default MyApp;
+export default App;
